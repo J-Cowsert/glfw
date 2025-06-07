@@ -1,7 +1,8 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "on"
+	staticruntime "Off"
+	warnings "Off"
 
 	targetdir ("bin/" .. Outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. Outputdir .. "/%{prj.name}")
@@ -45,7 +46,7 @@ project "GLFW"
 		}
 
 		defines
-		{
+		{	
 			"_GLFW_X11"
 		}
 
